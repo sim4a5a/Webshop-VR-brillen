@@ -3,5 +3,5 @@
 
 phpinfo();
 
-
+//comment
  ?>
