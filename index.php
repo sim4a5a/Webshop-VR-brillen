@@ -1,1 +1,7 @@
-//lknkhbh
+<?php
+
+
+phpinfo();
+
+
+ ?>
