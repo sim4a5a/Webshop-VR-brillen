@@ -1,6 +1,6 @@
 <?php
  session_start();
- $connect = mysqli_connect("localhost", "root", "Lente_2017", "webshop");  
+ $connect = mysqli_connect("localhost", "root", "Lente_2017", "webshop");
  if(isset($_POST["add_to_cart"]))
  {
       if(isset($_SESSION["shopping_cart"]))
