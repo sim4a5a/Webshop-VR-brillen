@@ -11,8 +11,8 @@
     padding-bottom: 15px;
 }
 html{
-    background-color: #bdbdbd;
-    font-family: 'Droid Serif', serif;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
 }
 body{
     margin:0;
@@ -30,14 +30,14 @@ img {
     padding:0;
     margin: 0;
 }
-.foto{
-    display: block;
-    position: center;
-}
-/*.banner {
-    padding: 15px;
 
-}*/
+.logo {
+  float:left;
+  margin-left: 4px;
+  width: 140px;
+
+}
+
 .projectimg{
     float: right;
     width: 25%;
@@ -45,7 +45,7 @@ img {
     border: yellowgreen 1px solid;
 }
 .copyright{
- font-size: 0.75em;
+ font-size: 1em;
  text-align: center;
 }
 .navtitel{
@@ -58,25 +58,30 @@ img {
 }
 .menu ul {
     list-style-type: none;
-    background-color: #444;
+    background-color: white;
     text-align: center;
     margin: 0;
     padding: 0;
     cursor: pointer;
 }
 .menu li {
-    padding: 8px;
+    padding: 4px;
     margin-bottom: 7px;
-    background-color: #444;
-    color: #ffffff;
+    background-color: white;
+    color: black;
     display: inline-block;
-    margin-right: -4px;
-    width: 33%;
+    /*margin-right: -4px;*/
+    width: 17%;
 }
-.menu li:hover {
-    background-color: #666;
+
+.menu li a {
+  color: #666;
 }
-.vl-1{
+.menu li :hover {
+  width:10px;
+  background-color: #f2f2f2;
+}
+/*.vl-1{
     background-color: #444;
     font-size: 1em;
     text-align: left;
@@ -86,11 +91,11 @@ img {
     background-color: #888;
     font-size: 1em;
     margin-bottom: 5px;
-}
+}*/
 .content {
-    background-color: #666;
+    border: 1px solid #666;
     padding: 15px;
-    color: #ffffff;
+    color: #666;
     text-align: left;
     font-size: 1em;
 }
@@ -102,16 +107,14 @@ a{
     text-decoration: none;
     color: mediumpurple;
 }
-a:hover{
-    color: red;
 
-}
 .footer {
     background-color: #444;
     color: #ffffff;
     text-align: left;
-    font-size: 1em;
+    font-size: 1.4em;
     padding: 15px;
+    font-family: 'Open Sans', sans-serif;
 }
 /* For mobile phones: */
 [class*="col-"] {
@@ -131,6 +134,7 @@ a:hover{
     .col-m-10 {width: 83.33%;}
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
+
 }
 @media only screen and (min-width: 768px) {
     /* For desktop: */
