@@ -7,7 +7,7 @@ include('includes/header.php');
 ?>
 
 
-<!--Content-->
+<!--Producten-->
 <div class="col-12 col-m-3">
 	<h2 align="center">Producten</h2>
     <?php
@@ -81,6 +81,8 @@ include('includes/header.php');
  </body>
 </html>
 
+
+<!--winkelmandje-->
 <?php
 if(isset($_POST["add"]))
 {
