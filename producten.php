@@ -81,7 +81,6 @@ include('includes/header.php');
  </body>
 </html>
 
-
 <!--winkelmandje-->
 <?php
 if(isset($_POST["add"]))

@@ -115,6 +115,7 @@ a{
     font-size: 1.4em;
     padding: 15px;
     font-family: 'Open Sans', sans-serif;
+    margin-top: 500px;
 }
 /* For mobile phones: */
 [class*="col-"] {

@@ -3,9 +3,10 @@
     <title>MultiVersum</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
-  
+
     <!-- <script src="navigation.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+    <link rel="SHORTCUT ICON" href="images/mvm_xs.png">
 </head>
 <body>
 
@@ -13,7 +14,7 @@
 
     <!--Navbar-->
 <div class="col-12 col-m-12 menu">
-  <img src="images\mvm_m.png" class="logo"></img>
+  <img src="images\mvm_s.png" class="logo"></img>
   <ul>
     <li><a href="index.php"><div class="navtitel">Home</div></a></li>
     <li><a href="producten.php"><div class="navtitel">Producten</div></a></li>
