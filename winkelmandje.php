@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "includes/header.php";
+
 ?>
 <!-- <h2>Mijn Winkelmandje</h2> -->
 <div class="cart col-10 col-m-12">
@@ -45,9 +45,6 @@ foreach($_SESSION["cart"] as $keys => $values)
 </table>
 </div>
 </div>
-<?php
-include "includes/footer.php";
-?>
 </body>
 </html>
 
@@ -68,7 +65,6 @@ if(!in_array($_GET["id"], $item_array_id))
   'item_quantity' => $_POST["quantity"]
   );
   $_SESSION["cart"][$count] = $item_array;
-  echo 'added to cart';
   echo '<script>window.location="winkelmandje.php"</script>';
 }
 else
