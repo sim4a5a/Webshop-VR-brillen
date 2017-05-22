@@ -19,7 +19,7 @@ include('includes/header.php');
 <div class='col-12 col-m-12'>
 </div>
 <div class="col-1"></div>
-<div class=''>
+
 <?php
 	$query = "SELECT * FROM products ORDER BY id DESC LIMIT 2";
 	$result = mysqli_query($connect, $query);
