@@ -111,6 +111,9 @@ img {
     padding: 0;
     cursor: pointer;
 }
+.dropdownselect{
+    width:15%;
+}
 .menu li {
     padding: 4px;
     margin-bottom: 7px;
