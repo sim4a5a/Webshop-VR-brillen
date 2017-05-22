@@ -1,6 +1,7 @@
 
 <!--Header-->
 <?php
+session_start();
 include('includes/header.php');
  ?>
 <!--Banner-->
@@ -17,11 +18,11 @@ include('includes/header.php');
 <div class='col-12 col-m-12'>
 </div>
 <div class="col-1"></div>
-<img class="foto col-2 col-m-12" src="http://placehold.it/250x250">
-<img class="foto col-2 col-m-12" src="http://placehold.it/250x250">
-<img class="foto col-2 col-m-12" src="http://placehold.it/250x250">
-<img class="foto col-2 col-m-12" src="http://placehold.it/250x250">
-<img class="foto col-2 col-m-12" src="http://placehold.it/250x250">
+<img class="foto col-2 col-m-12" src="images/1.jpg">
+<img class="foto col-2 col-m-12" src="images/2.jpg">
+<img class="foto col-2 col-m-12" src="images/3.jpg">
+<img class="foto col-2 col-m-12" src="images/4.jpg">
+<img class="foto col-2 col-m-12" src="images/5.jpg">
 <!-- <img class="foto" src="http://placehold.it/250x250">
 <img class="foto" src="http://placehold.it/250x250">
 <img class="foto" src="http://placehold.it/250x250">
