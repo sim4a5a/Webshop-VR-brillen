@@ -27,7 +27,6 @@ foreach($_SESSION["cart"] as $keys => $values)
         <td>$ <?php echo $values["product_price"]; ?></td>
         <td>$ <?php echo number_format($values["item_quantity"] * $values["product_price"], 5); ?></td>
         <td><a href="winkelmandje.php?action=delete&id=<?php echo $values["product_id"]; ?>"><span class="text-danger">X</span></a></td>
-        <!-- <td><input type='submit' class='button' name='update_cart' value='Update' /></td> -->
         <td><a href="winkelmandje.php?action=update&id=<?php echo $values["item_quantity"]; ?>"><span class="text-danger">+</span></a></td>
         </tr>
         <?php
