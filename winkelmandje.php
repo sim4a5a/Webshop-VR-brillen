@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include "includes/header.php";
 ?>
 <!-- <h2>Mijn Winkelmandje</h2> -->
 <div class="cart col-10 col-m-12">
@@ -45,6 +45,9 @@ foreach($_SESSION["cart"] as $keys => $values)
 </table>
 </div>
 </div>
+<?php
+include "includes/footer.php";
+?>
 </body>
 </html>
 
