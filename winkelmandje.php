@@ -38,11 +38,16 @@ foreach($_SESSION["cart"] as $keys => $values)
     <td align="right">€ <?php echo number_format($total, 2	); ?></td>
     <td></td>
     </tr>
+
     <?php
 }
 ?>
+
 </table>
+<br><br>
+<a href="producten.php" class="continue">verder winkelen</a>
 </div>
+
 </body>
 </html>
 
@@ -110,4 +115,6 @@ if(isset($_GET["update"]))
 {
 $quantities = $_POST["cart"];
 }
+
+
 include ("includes/footer.php");

@@ -34,10 +34,9 @@ include('includes/header.php');
             <img src="<?php echo $row["image"]; ?>">
             <h5 class="text-info"><?php echo $row["p_name"]; ?></h5>
             <h5 class="text-danger">€ <?php echo $row["price"]; ?></h5>
-            <input type="text" name="quantity" class="form-control" value="1">
             <input type="hidden" name="hidden_name" value="<?php echo $row["p_name"]; ?>">
             <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>"><br>
-            <input type="submit" name="add" style="margin-top:5px;" class="submitbutton" value="+ in winkelmandje">
+            <input type="submit" name="detail" style="margin-top:5px;" class="submitbutton" value="Lees meer">
             </div>
             </form>
             </div>

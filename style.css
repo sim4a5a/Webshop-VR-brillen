@@ -141,6 +141,17 @@ a{
    border: none;
    padding: 10px;
 }
+
+
+/*winkelmandje*/
+
+.continue {
+  background-color: #0080ff;
+  color:white;
+  border-radius: 4px;
+  border: 1px solid #0080ff;
+  padding: 10px;
+}
 .footer {
     background-color: black;
     color: #ffffff;
