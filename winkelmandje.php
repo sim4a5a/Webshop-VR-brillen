@@ -74,7 +74,7 @@ if(!in_array($_GET["id"], $item_array_id))
 else
 {
   echo '<script>alert("Products already added to cart")</script>';
-  echo '<script>window.location="producten.php"</script>';
+  echo '<script>window.location="winkelmandje.php"</script>';
 }
 }
 else
@@ -98,7 +98,7 @@ foreach($_SESSION["cart"] as $keys => $values)
   {
     unset($_SESSION["cart"][$keys]);
     echo '<script>alert("Product has been removed")</script>';
-    echo '<script>window.location="producten.php"</script>';
+    echo '<script>window.location="winkelmandje.php"</script>';
   }
 }
 }
