@@ -1,5 +1,3 @@
-
-
 <?php
 session_start();
 $connect = mysqli_connect("localhost", "root", "Lente_2017", "tut");
@@ -38,7 +36,7 @@ include('includes/header.php');
 	?>
 </div>
 
-  
+
 
 <?php
 
