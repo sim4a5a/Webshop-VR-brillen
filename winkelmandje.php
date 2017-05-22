@@ -12,7 +12,6 @@ include ("includes/header.php");
 <th>Prijs</th>
 <th>Totaal</th>
 <th>Verwijder</th>
-<th>Voeg toe</th>
 </tr>
 <?php
 if(!empty($_SESSION["cart"]))
@@ -23,11 +22,10 @@ foreach($_SESSION["cart"] as $keys => $values)
   ?>
         <tr>
         <td><?php echo $values["item_name"]; ?></td>
-        <td><?php echo $values["item_quantity"]; ?></td>
+        <td><input type="text" value="<?php echo $values["item_quantity"]; ?>"</td>
         <td>$ <?php echo $values["product_price"]; ?></td>
         <td>$ <?php echo number_format($values["item_quantity"] * $values["product_price"], 2); ?></td>
-        <td><a href="winkelmandje.php?action=delete&id=<?php echo $values["product_id"]; ?>"><span class="text-danger">X</span></a></td>
-        <td><a href="winkelmandje.php?action=update&id=<?php echo $values["item_quantity"]; ?>"><span class="text-danger">+</span></a></td>
+        <td><a href="winkelmandje.php?action=delete&id=<?php echo $values["product_id"]; ?>"><span><img style="width:20px;" src="images/delete.png"></span></a></td>
         </tr>
         <?php
   $total = $total + ($values["item_quantity"] * $values["product_price"]);
@@ -103,18 +101,26 @@ foreach($_SESSION["cart"] as $keys => $values)
 }
 }
 
-if(isset($_POST['update_cart'])) {
-$quantities = $_POST['item_quantity'];
-foreach($quantities as $id => $quantity) {
-    $_SESSION['shopping_cart'][$id]['quantity'] = $quantity;
-    echo "ID: $id - Quantity: $quantity <br />";
-}
+//Update winkelmandje
+
+if(isset($_GET["update"])) {
+  $arrQuantity = $_POST["quantity"];
+  $cart = unserialize ( serialize ( $_SESSION["cart"]));
+  for($i = 0; $i < count ($cart); $i++) {
+    $cart[$i]->quantity = $arrQuantity[i];
+  }
+  $_SESSION ["cart"] = $cart;
+
 }
 
-if(isset($_GET["update"]))
-{
-$quantities = $_POST["cart"];
-}
+// if(isset($_POST['update_cart'])) {
+// $quantities = $_POST['item_quantity'];
+// foreach($quantities as $id => $quantity) {
+//     $_SESSION['shopping_cart'][$id]['quantity'] = $quantity;
+//     echo "ID: $id - Quantity: $quantity <br />";
+// }
+// }
+
 
 
 include ("includes/footer.php");
