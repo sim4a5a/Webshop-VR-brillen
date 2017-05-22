@@ -23,7 +23,7 @@ foreach($_SESSION["cart"] as $keys => $values)
   ?>
         <tr>
         <td><?php echo $values["item_name"]; ?></td>
-        <td><input type="text" name="quantity" <?php echo $values["item_quantity"]?></td>
+        <td><?php echo $values["item_quantity"]; ?></td>
         <td>$ <?php echo $values["product_price"]; ?></td>
         <td>$ <?php echo number_format($values["item_quantity"] * $values["product_price"], 2); ?></td>
         <td><a href="winkelmandje.php?action=delete&id=<?php echo $values["product_id"]; ?>"><span class="text-danger">X</span></a></td>
