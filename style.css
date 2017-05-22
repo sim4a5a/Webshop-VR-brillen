@@ -97,8 +97,9 @@ img {
 .menu li a {
   color: #666;
 }
-.menu li :hover {
-  width:10px;
+
+.menu li:hover {
+  
   background-color: #f2f2f2;
 }
 /*.vl-1{
