@@ -26,9 +26,9 @@ foreach($_SESSION["cart"] as $keys => $values)
         <td><input type="text" name="quantity" <?php echo $values["item_quantity"]?></td>
         <td>$ <?php echo $values["product_price"]; ?></td>
         <td>$ <?php echo number_format($values["item_quantity"] * $values["product_price"], 5); ?></td>
-        <td><a href="producten.php?action=delete&id=<?php echo $values["product_id"]; ?>"><span class="text-danger">X</span></a></td>
+        <td><a href="winkelmandje.php?action=delete&id=<?php echo $values["product_id"]; ?>"><span class="text-danger">X</span></a></td>
         <!-- <td><input type='submit' class='button' name='update_cart' value='Update' /></td> -->
-        <td><a href="producten.php?action=update&id=<?php echo $values["item_quantity"]; ?>"><span class="text-danger">+</span></a></td>
+        <td><a href="winkelmandje.php?action=update&id=<?php echo $values["item_quantity"]; ?>"><span class="text-danger">+</span></a></td>
         </tr>
         <?php
   $total = $total + ($values["item_quantity"] * $values["product_price"]);
@@ -65,7 +65,8 @@ if(!in_array($_GET["id"], $item_array_id))
   'item_quantity' => $_POST["quantity"]
   );
   $_SESSION["cart"][$count] = $item_array;
-  echo '<script>window.location="producten.php"</script>';
+  echo 'added to cart';
+  echo '<script>window.location="winkelmandje.php"</script>';
 }
 else
 {
