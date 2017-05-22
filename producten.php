@@ -8,6 +8,7 @@ include('includes/header.php');
 
 
 <!--Producten-->
+<div class="row">
 <div class="col-12 col-m-3">
 	<h2 align="center">Producten</h2>
     <?php
@@ -20,14 +21,14 @@ include('includes/header.php');
 			?>
             <div class="col-m-3">
             <form method="post" action="producten.php?action=add&id=<?php echo $row["id"]; ?>">
-            <div style="border: 1px solid #eaeaec; box-shadow: 0 1px 2px rgba(0,0,0,0.05) width: 40px; height: 200px;" align="center">
-            <img src="<?php echo $row["image"]; ?>" class="img-responsive">
+            <div align="center">
+            <img src="<?php echo $row["image"]; ?>">
             <h5 class="text-info"><?php echo $row["p_name"]; ?></h5>
             <h5 class="text-danger">€ <?php echo $row["price"]; ?></h5>
             <input type="text" name="quantity" class="form-control" value="1">
             <input type="hidden" name="hidden_name" value="<?php echo $row["p_name"]; ?>">
             <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>"><br>
-            <input type="submit" name="add" style="margin-top:5px;" class="btn btn-default" value="+ in winkelmandje">
+            <input type="submit" name="add" style="margin-top:5px;" class="submitbutton" value="+ in winkelmandje">
             </div>
             </form>
             </div>
@@ -35,12 +36,14 @@ include('includes/header.php');
 		}
 	}
 	?>
-    <div style="clear:both"></div>
-    <h2>Mijn Winkelmandje</h2>
-    <div class="table-responsive">
-    <table class="table table-bordered">
+</div>
+
+    <!-- <h2>Mijn Winkelmandje</h2> -->
+    <div class="cart col-10 col-m-12">
+		<h2>Mijn Winkelmandje</h2>
+    <table style="border collapse:collapse; border:1px solid black;">
     <tr>
-    <th width="40%">Product Naam</th>
+    <th width="30%">Product Naam</th>
     <th width="10%">Aantal</th>
     <th width="20%">Prijs</th>
     <th width="15%">Totaal</th>
