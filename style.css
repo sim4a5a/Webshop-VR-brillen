@@ -10,6 +10,22 @@
     float: left;
     padding-bottom: 15px;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+  width: 30%;
+}
+
+td {
+  width: 30%;
+
+}
+table, th, td {
+    border: 1px solid white;
+}
 html{
     background-color: white;
     font-family: 'Open Sans', sans-serif;
@@ -128,7 +144,7 @@ a{
     font-size: 1.4em;
     padding: 15px;
     font-family: 'Open Sans', sans-serif;
-    margin-top: 500px;
+    margin-top: 300px;
 }
 /* For mobile phones: */
 [class*="col-"] {

@@ -5,14 +5,14 @@ include ("includes/header.php");
 <!-- <h2>Mijn Winkelmandje</h2> -->
 <div class="cart col-10 col-m-12">
 <h2>Mijn Winkelmandje</h2>
-<table style="border collapse:collapse; border:1px solid black;">
+<table>
 <tr>
-<th width="30%">Product Naam</th>
-<th width="10%">Aantal</th>
-<th width="20%">Prijs</th>
-<th width="15%">Totaal</th>
-<th width="5%">Verwijder</th>
-<th width="5%">Voeg toe</th>
+<th>Product Naam</th>
+<th>Aantal</th>
+<th>Prijs</th>
+<th>Totaal</th>
+<th>Verwijder</th>
+<th>Voeg toe</th>
 </tr>
 <?php
 if(!empty($_SESSION["cart"]))
