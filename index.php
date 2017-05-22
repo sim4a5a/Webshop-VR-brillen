@@ -29,7 +29,7 @@ include('includes/header.php');
 		{
 			?>
             <div class="col-m-3">
-            <form method="post" action="winkelmandje.php?action=add&id=<?php echo $row["id"]; ?>">
+            <form method="post" action="index.php?action=add&id=<?php echo $row["id"]; ?>">
             <div align="center">
             <img src="<?php echo $row["image"]; ?>">
             <h5 class="text-info"><?php echo $row["p_name"]; ?></h5>
