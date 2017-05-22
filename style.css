@@ -55,7 +55,34 @@ img {
   float:left;
   margin-left: 4px;
   width: 120px;
+}
 
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .logo {
+    display: none;
+  }
+.menu ul {
+  padding: 4px;
+  margin-bottom: 7px;
+  background-color: white;
+  color: black;
+  width: 18%;
+  text-align: center;
+}
+
+.menu li a {
+  color: #666;
+  text-align: center;
+}
+
+.menu li a:hover {
+  color: #f1c40f;
+}
+
+.winkelmandje{
+  float:right;
+  width:5px;
+}
 }
 
 .projectimg{
