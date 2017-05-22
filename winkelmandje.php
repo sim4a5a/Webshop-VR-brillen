@@ -3,8 +3,9 @@ session_start();
 include ("includes/header.php");
 ?>
 <!-- <h2>Mijn Winkelmandje</h2> -->
+<div class="col-1"></div>
 <div class="cart col-10 col-m-12">
-<h2>Mijn Winkelmandje</h2>
+<center><h2>Mijn Winkelmandje</h2></center> 
 <table>
 <tr>
 <th>Product Naam</th>

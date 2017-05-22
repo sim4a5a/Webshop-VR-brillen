@@ -29,6 +29,11 @@ include('includes/header.php');
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
+								<option value="5">6</option>
+								<option value="5">7</option>
+								<option value="5">8</option>
+								<option value="5">9</option>
+								<option value="5">10</option>
             </select>
             <input type="hidden" name="hidden_name" value="<?php echo $row["p_name"]; ?>">
             <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>"><br>

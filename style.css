@@ -134,7 +134,7 @@ img {
 
 
 .detailbutton{
-    background-color: #0080ff;
+    background-color: #16a085;
     color:white;
     border-radius: 4px;
     border: none;
@@ -163,7 +163,7 @@ a{
   margin-top: 200px;
 }
 .submitbutton {
-   background-color: #0080ff;
+   background-color: #16a085;
    color:white;
    border-radius: 4px;
    border: none;
@@ -174,7 +174,7 @@ a{
 /*winkelmandje*/
 
 .continue {
-  background-color: #0080ff;
+  background-color: #16a085;
   color:white;
   border-radius: 4px;
   border: 1px solid #0080ff;
