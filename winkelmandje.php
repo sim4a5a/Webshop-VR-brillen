@@ -72,7 +72,7 @@ if(!in_array($_GET["id"], $item_array_id))
 }
 else
 {
-  echo '<script>alert("Products already added to cart")</script>';
+  echo '<script>alert("Product staat al in winkelmandje")</script>';
   echo '<script>window.location="winkelmandje.php"</script>';
 }
 }
@@ -96,7 +96,7 @@ foreach($_SESSION["cart"] as $keys => $values)
   if($values["product_id"] == $_GET["id"])
   {
     unset($_SESSION["cart"][$keys]);
-    echo '<script>alert("Product has been removed")</script>';
+    echo '<script>alert("Product is verwijderd")</script>';
     echo '<script>window.location="winkelmandje.php"</script>';
   }
 }

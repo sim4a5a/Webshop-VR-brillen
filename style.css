@@ -54,7 +54,7 @@ img {
 .logo {
   float:left;
   margin-left: 4px;
-  width: 140px;
+  width: 120px;
 
 }
 
@@ -98,10 +98,14 @@ img {
   color: #666;
 }
 
-.menu li:hover {
-
-  background-color: #f2f2f2;
+.menu li a:hover {
+  color: #f1c40f;
 }
+/*
+.menu li:hover {
+  background-color: #f2f2f2;
+  height:70px;
+}*/
 /*.vl-1{
     background-color: #444;
     font-size: 1em;
