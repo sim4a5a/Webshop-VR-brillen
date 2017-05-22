@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include "includes/header.php";
 ?>
 <!-- <h2>Mijn Winkelmandje</h2> -->
 <div class="cart col-10 col-m-12">
@@ -42,7 +42,6 @@ foreach($_SESSION["cart"] as $keys => $values)
 }
 ?>
 </table>
-</div>
 </div>
 </body>
 </html>
@@ -111,3 +110,4 @@ if(isset($_GET["update"]))
 {
 $quantities = $_POST["cart"];
 }
+include "includes/footer.php";
