@@ -1,3 +1,7 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "Lente_2017", "tut");
+ ?>
+
 <html>
 <head>
     <title>MultiVersum</title>

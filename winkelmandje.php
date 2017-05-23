@@ -3,9 +3,11 @@ session_start();
 include ("includes/header.php");
 ?>
 <!-- <h2>Mijn Winkelmandje</h2> -->
-<div class="col-1"></div>
-<div class="cart col-10 col-m-12">
-<center><h2>Mijn Winkelmandje</h2></center> 
+<div class="content2">
+<div class="col-12"></div>
+<div class="col-2"></div>
+<div class="cart col-11 col-m-12">
+<center><h2>Mijn Winkelmandje</h2></center>
 <table>
 <tr>
 <th>Product Naam</th>
@@ -46,7 +48,11 @@ foreach($_SESSION["cart"] as $keys => $values)
 <br><br>
 <a href="producten.php" class="continue">verder winkelen</a>
 </div>
-
+</div>
+<div class="col-12"></div>
+<div class="col-12"></div>
+<div class="col-12"></div>
+<div class="col-12"></div>
 </body>
 </html>
 
@@ -86,13 +92,15 @@ $item_array = array(
 $_SESSION["cart"][0] = $item_array;
 }
 }
+
+//delete product
 if(isset($_GET["action"]))
 {
-if($_GET["action"] == "delete")
-{
-foreach($_SESSION["cart"] as $keys => $values)
-{
-  if($values["product_id"] == $_GET["id"])
+   if($_GET["action"] == "delete")
+  {
+    foreach($_SESSION["cart"] as $keys => $values)
+  {
+    if($values["product_id"] == $_GET["id"])
   {
     unset($_SESSION["cart"][$keys]);
     echo '<script>alert("Product is verwijderd")</script>';
