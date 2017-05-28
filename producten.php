@@ -8,11 +8,10 @@ include('includes/header.php');
 <div class="col-12 col-m-3">
 	<h2 align="center">Producten</h2>
     <?php
-	$query = "SELECT * FROM products ORDER BY id ASC LIMIT 0,10";
-	$result = mysqli_query($connect, $query);
-	if(mysqli_num_rows($result) > 0)
-	{
-		while($row = mysqli_fetch_array($result))
+	mysql_connect("localhost", "root", "Lente_2017");
+	mysql_select_db("tut");
+	$res = mysql_query("SELECT * FROM products ORDER BY id ASC LIMIT 0,10");
+	while($row = mysql_fetch_array($res))
 		{
 			?>
             <div class="col-m-3">
@@ -47,21 +46,21 @@ include('includes/header.php');
             </div>
             <?php
 		}
-	}
+
 	?>
 </div>
 
 <?php
   //pagination voor producten
-	$query = "SELECT * FROM products";
-	$cou=mysqli_num_rows($result);
+	$res1 = mysql_query("SELECT * FROM products");
+	$cou=mysql_num_rows($res1);
 
 	$a=$cou/5;
 	$a=ceil($a);
-	echo "<br><br>";
+	echo "<br>";
 	for($b=1;$b<=$a;$b++)
 	{
-		?><center><a href="producten.php?page=<?php echo $b; ?>" style="text-decoration:none; color:black;"><?php echo $b ." ";?></a></center><?php
+		?><a href="producten.php?page=<?php echo $b; ?>" style="text-decoration:none; color:black;"><?php echo $b ." ";?></a><?php
 	}
 ?>
 
