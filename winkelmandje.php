@@ -26,8 +26,8 @@ foreach($_SESSION["cart"] as $keys => $values)
         <tr>
         <td><?php echo $values["item_name"]; ?></td>
         <td><input type="text" value="<?php echo $values["item_quantity"]; ?>"</td>
-        <td>$ <?php echo $values["product_price"]; ?></td>
-        <td>$ <?php echo number_format($values["item_quantity"] * $values["product_price"], 2); ?></td>
+        <td>€ <?php echo $values["product_price"]; ?></td>
+        <td>€ <?php echo number_format($values["item_quantity"] * $values["product_price"], 2); ?></td>
         <td><a href="winkelmandje.php?action=delete&id=<?php echo $values["product_id"]; ?>"><span><img style="width:20px;" src="images/delete.png"></span></a></td>
         </tr>
         <?php
@@ -36,7 +36,7 @@ foreach($_SESSION["cart"] as $keys => $values)
 ?>
     <tr>
     <td colspan="3" align="right">Totaal</td>
-    <td align="right">€ <?php echo number_format($total, 2	); ?></td>
+    <td align="right">€ <?php echo number_format($total, 2); ?></td>
     <td></td>
     </tr>
 
@@ -46,7 +46,7 @@ foreach($_SESSION["cart"] as $keys => $values)
 
 </table>
 <br><br>
-<a href="producten.php" class="continue">verder winkelen</a>
+<a href="producten.php" class="continue">Verder winkelen</a>
 </div>
 </div>
 <div class="col-12"></div>
@@ -103,7 +103,7 @@ if(isset($_GET["action"]))
     if($values["product_id"] == $_GET["id"])
   {
     unset($_SESSION["cart"][$keys]);
-    echo '<script>alert("Product is verwijderd")</script>';
+    echo '<script>alert("Product is verwijderd uit uw winkelmandje!")</script>';
     echo '<script>window.location="winkelmandje.php"</script>';
   }
 }

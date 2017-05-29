@@ -35,7 +35,7 @@ include('includes/header.php');
             <input type="hidden" name="hidden_name" value="<?php echo $row["p_name"]; ?>">
             <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>"><br>
             <input type="submit" name="add" style="margin-top:5px;" class="submitbutton" value="+ In winkelmandje">
-						<a href="detailpagina.php" name="details" class="detailbutton">Detail</a>
+						<a href="detailpagina.php" name="details" class="detailbutton">Details</a>
 
             <!--<form method="post" action="detailspagina.php?action=add&id=<?php //echo $row["description"];?>">-->
 
