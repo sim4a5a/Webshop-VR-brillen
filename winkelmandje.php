@@ -1,6 +1,7 @@
 <?php
 session_start();
 include ("includes/header.php");
+$connect = mysqli_connect("localhost", "root", "Lente_2017", "tut");
 ?>
 <!-- <h2>Mijn Winkelmandje</h2> -->
 <div class="content2">
