@@ -211,6 +211,17 @@ a{
 	text-rendering:optimizeLegibility;
 }
 
+.error {
+  color: red;
+}
+
+.succes {
+  color: #ff9966;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 .container {
 	max-width:400px;
 	width:100%;

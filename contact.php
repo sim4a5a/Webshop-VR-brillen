@@ -8,23 +8,24 @@ include('contact_process.php');
     <h3>Contact</h3>
     <h4>Neem contact met ons op en u krijgt zo snel mogelijk een antwoord!</h4>
     <fieldset>
-      <input placeholder="Uw Naam" type="text" tabindex="1" name="name" autofocus>
+      <input placeholder="Uw Naam" type="text" name="name" tabindex="1" value="<?= $name ?>" autofocus>
       <span class="error"><?= $name_error ?></span>
     </fieldset>
     <fieldset>
-      <input placeholder="Uw Email" type="email" tabindex="2" name="email">
+      <input placeholder="Uw Email" type="email" name="email" value="<?= $email ?>" tabindex="2" >
       <span class="error"><?= $email_error ?></span>
     </fieldset>
     <fieldset>
-      <input placeholder="Uw telefoonnummer" type="tel" tabindex="3" name="phone">
+      <input placeholder="Uw telefoonnummer" type="tel" name="phone" value="<?= $phone ?>" tabindex="3" >
       <span class="error"><?= $phone_error ?></span>
     </fieldset>
     <fieldset>
-      <textarea placeholder="Typ u bericht hier...." tabindex="5" name="message"></textarea>
+      <textarea placeholder="Typ u bericht hier...." name="message" value="<?= $message ?>" tabindex="5" ></textarea>
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">verzend</button>
     </fieldset>
+    <div class="succes"><?= $success; ?></div>
   </form>
 
 
