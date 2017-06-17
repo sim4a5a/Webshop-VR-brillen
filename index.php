@@ -2,7 +2,7 @@
 <!--Header-->
 <?php
 session_start();
-$connect = mysqli_connect("localhost", "root", "Lente_2017", "tut");
+$con = mysqli_connect("localhost", "root", "Lente_2017", "tut");
 include('includes/header.php');
  ?>
 <!--Banner-->
@@ -22,7 +22,7 @@ include('includes/header.php');
 
 <?php
 	$query = "SELECT * FROM products ORDER BY id DESC LIMIT 3";
-	$result = mysqli_query($connect, $query);
+	$result = mysqli_query($con, $query);
 	if(mysqli_num_rows($result) > 0)
 	{
 		while($row = mysqli_fetch_array($result))
