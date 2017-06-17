@@ -8,9 +8,9 @@ include('includes/header.php');
 <div class="row">
 <div class="col-12 col-m-3">
 	<h2 align="center">Producten</h2>
-    <?php
-		$connect = mysqli_connect("localhost", "root", "Lente_2017", "tut");
-		$query = "SELECT * FROM products ORDER BY id ASC";
+        <?php
+	  $connect = mysqli_connect("localhost", "root", "Lente_2017", "tut");
+	  $query = "SELECT * FROM products ORDER BY id ASC";
 	  $result = mysqli_query($connect, $query);
 	  if(mysqli_num_rows($result) > 0)
 	   {
@@ -30,32 +30,25 @@ include('includes/header.php');
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+	        <option value="10">10</option>
             </select>
             <input type="hidden" name="hidden_name" value="<?php echo $row["p_name"]; ?>">
             <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>"><br>
             <input type="submit" name="add" style="margin-top:5px;" class="submitbutton" value="+ In winkelmandje">
-
-						<a href="detailpagina.php?action=add&id=<?php echo $row["id"]; $row["description"];"</a>" ?>";
-
-
-
-            <!-- <form method="post" action="detailspagina.php?action=add&id=<?php //echo $row["description"];?>"> -->
-
-            <!--</form>-->
+            <a href="detailpagina.php?action=add&id=<?php echo $row["id"]; $row["description"];"</a>" ?>";
 
             </div>
             </form>
             </div>
-						<?php
-					}
-				}
+	   <?php
+		}
+	}
 
-			?>
+	    ?>
 </div>
 
 
