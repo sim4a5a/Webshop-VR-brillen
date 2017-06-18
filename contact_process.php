@@ -1,6 +1,5 @@
 <?php
 
-
 // define variables and set to empty values
 $name_error = $email_error = $phone_error = $url_error = "";
 $name = $email = $phone = $message = $url = $success = "";

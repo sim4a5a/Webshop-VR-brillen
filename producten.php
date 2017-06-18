@@ -1,29 +1,18 @@
 <?php
 session_start();
 include('includes/header.php');
-
 ?>
 
-<!DOCTYPE html><html>
-<head>
-<title>PHP Pagination</title>
-</head><body><?php
+<?php
 // Establish Connection to the Database
 $con = mysqli_connect("localhost", "root", "Lente_2017", "tut");
 //Records per page
 $per_page=10;
 if (isset($_GET['page'])) {
-
 $page = $_GET['page'];
-
-}
-
-else {
-
+} else {
 $page=1;
-
 }
-
 // Page will start from 0 and Multiple by Per Page
 $start_from = ($page-1) * $per_page;
 
@@ -31,16 +20,13 @@ $start_from = ($page-1) * $per_page;
 $query = "SELECT * FROM products LIMIT $start_from, $per_page";
 $result = mysqli_query($con, $query);
 
-?>
-<table align='center' border='2' cellpadding='3'>
-<?php
 while ($row = mysqli_fetch_assoc($result)) {
 ?>
 <div class="col-m-3">
             <form method="post" action="winkelmandje.php?action=add&id=<?php echo $row["id"]; ?>">
             <div align="center">
             <img src="<?php echo $row["image"]; ?>">
-						<a href="detailpagina.php?id='.$row['id'].'"></a>
+            <a class="descrip" href="detailpagina.php?action=add&id=<?php echo $row["id"]; $row["description"];"</a>" ?>">;
             <h5 class="text-info"><?php echo $row["p_name"]; ?></h5>
             <h5 class="text-danger">€ <?php echo $row["price"]; ?></h5>
             <select type="dropdown" name="quantity" class="form-control dropdownselect">
@@ -58,18 +44,17 @@ while ($row = mysqli_fetch_assoc($result)) {
             <input type="hidden" name="hidden_name" value="<?php echo $row["p_name"]; ?>">
             <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>"><br>
             <input type="submit" name="add" style="margin-top:5px;" class="submitbutton" value="+ In winkelmandje">
-            <a href="detailpagina.php?action=add&id=<?php echo $row["id"]; $row["description"];"</a>" ?>">;
+
 
             </div>
             </form>
-            </div>
+           </div>
 
-<div class="pages">
 <?php
 }
 
 ?>
-
+<div class="page" >
 <?php
 
 //Now select all from table
@@ -94,12 +79,6 @@ echo "<a href='producten.php?page=$total_pages'>".'Last Page'."</a></div> ";
 ?>
 
 </div>
-
-
-</body>
-</html>
-
-
 
 
 <?php

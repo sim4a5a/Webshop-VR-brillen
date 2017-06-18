@@ -27,14 +27,7 @@ include('contact_process.php');
     </fieldset>
     <div class="succes"><?= $success; ?></div>
   </form>
-
-
 </div>
-
-
-
-
-
 
 
  <?php

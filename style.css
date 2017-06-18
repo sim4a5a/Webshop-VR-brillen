@@ -138,6 +138,12 @@ img {
     padding: 11px;
 
 }
+
+.descrip {
+  color: black;
+}
+
+
 .content {
     /*border: 1px solid #666;*/
     padding: 15px;
