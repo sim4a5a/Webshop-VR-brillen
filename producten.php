@@ -26,7 +26,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             <form method="post" action="winkelmandje.php?action=add&id=<?php echo $row["id"]; ?>">
             <div align="center">
             <img src="<?php echo $row["image"]; ?>">
-            <a class="descrip" href="detailpagina.php?action=add&id=<?php echo $row["id"]; $row["description"];"</a>" ?>">;
+            <div><a class="descrip" href="detailpagina.php?action=add&id=<?php echo $row["id"]; $row["description"];"</a>" ?>"></div>
             <h5 class="text-info"><?php echo $row["p_name"]; ?></h5>
             <h5 class="text-danger">€ <?php echo $row["price"]; ?></h5>
             <select type="dropdown" name="quantity" class="form-control dropdownselect">
@@ -67,7 +67,6 @@ $total_records = mysqli_num_rows($result);
 $total_pages = ceil($total_records / $per_page);
 
 //Going to first page
-
 echo "<div class='pages'<center><a href='producten.php?page=1'>".'First Page'."</a>";
 
 for ($i=1; $i<=$total_pages; $i++) {

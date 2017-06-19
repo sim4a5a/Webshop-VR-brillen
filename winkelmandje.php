@@ -47,7 +47,7 @@ foreach($_SESSION["cart"] as $keys => $values)
 
 </table>
 <br><br>
-<a href="producten.php" class="continue">Verder winkelen</a>
+  <a href="producten.php" class="continue">Verder winkelen</a>
 </div>
 </div>
 <div class="col-12"></div>
