@@ -134,3 +134,5 @@ if(isset($_GET["update"])) {
 
 
 include ("includes/footer.php");
+
+?>

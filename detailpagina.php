@@ -3,7 +3,7 @@ session_start();
 include('includes/header.php');
 
 $con = mysqli_connect("localhost", "root", "Lente_2017", "tut");
-$product = $_GET['id'];
+$product = (isset($_GET['id']) ? $_GET['id'] : null);
 $query = "SELECT * FROM products WHERE id=" . $product;
 $result = mysqli_query($con, $query);
 

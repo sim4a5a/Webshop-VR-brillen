@@ -25,8 +25,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 <div class="col-m-3">
             <form method="post" action="winkelmandje.php?action=add&id=<?php echo $row["id"]; ?>">
             <div align="center">
+              <div><a class="descrip" href="detailpagina.php?action=add&id=<?php echo $row["id"]; $row["description"];"</a>" ?>"></div>
             <img src="<?php echo $row["image"]; ?>">
-            <div><a class="descrip" href="detailpagina.php?action=add&id=<?php echo $row["id"]; $row["description"];"</a>" ?>"></div>
             <h5 class="text-info"><?php echo $row["p_name"]; ?></h5>
             <h5 class="text-danger">€ <?php echo $row["price"]; ?></h5>
             <select type="dropdown" name="quantity" class="form-control dropdownselect">
